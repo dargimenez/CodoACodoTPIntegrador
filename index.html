@@ -16,7 +16,7 @@
 
         <!--BARRA DE NAVEGACION-->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-xl">
                     <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" alt="Codo a Codo" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" target="_blank">
                         <img src="img/codoacodo.png" class="bi me-2" width="50" height="50">
@@ -31,7 +31,7 @@
                             <li class="nav-item"><a href="#oradores" class="nav-link">Los oradores</a></li>
                             <li class="nav-item"><a href="#lugar" class="nav-link">El lugar y la fecha</a></li>
                             <li class="nav-item"><a href="#orador" class="nav-link">Conviertete en orador</a></li>
-                            <li class="nav-item "><a href="#" class="nav-link text-success">Comprar Tickets</a></li>
+                            <li class="nav-item "><a href="comprarTickets.html" class="nav-link text-success">Comprar Tickets</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,16 +40,16 @@
         
 
         <!--CONFERENCIA-->
-        <div id="myCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div id="conferencia" class="carousel-inner">
+            <div id="conferencia" class="carousel-inner m-0">
                 <div class="carousel-item active">
-                    <img src="img/ba1.jpg" alt="Buenos Aires"/> 
-                    <div class="carousel-caption text-end">
+                    <img src="img/ba1.jpg" alt="Buenos Aires" class="img-fluid"/> 
+                    <div class="carousel-caption text-end ">
                         <h1 class="display-5 fw-bold">Conf Bs As</h1>
                         <p class="lead mb-4 text-end">
                             Bs As llega por primera vez a Argentina. Un evento para compratir con
@@ -60,12 +60,12 @@
                         </p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                             <button type="button" class="btn btn-outline-light btn-lg px-4">Quiero ser orador</button>
-                            <button type="button" class="btn btn-success btn-lg px-4 gap-3">Comprar Tickets</button>
+                            <button type="button" class="btn btn-success btn-lg px-4 gap-3"><a href="comprarTickets.html" class="nav-link text-ligth">Comprar Tickets</a></button>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/ba2.jpg" alt="Buenos Aires"/> 
+                    <img src="img/ba2.jpg" alt="Buenos Aires" class="img-fluid"/> 
                     <div class="carousel-caption text-end">
                         <h1 class="display-5 fw-bold">Conf Bs As</h1>
                         <p class="lead mb-4 text-end">
@@ -77,12 +77,12 @@
                         </p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                             <button type="button" class="btn btn-outline-light btn-lg px-4">Quiero ser orador</button>
-                            <button type="button" class="btn btn-success btn-lg px-4 gap-3">Comprar Tickets</button>
+                            <button type="button" class="btn btn-success btn-lg px-4 gap-3"><a href="comprarTickets.html" class="nav-link text-ligth">Comprar Tickets</a></button>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/ba3.jpg" alt="Buenos Aires"/> 
+                    <img src="img/ba3.jpg" alt="Buenos Aires"  class="img-fluid/> 
                     <div class="carousel-caption text-end">
                         <h1 class="display-5 fw-bold">Conf Bs As</h1>
                         <p class="lead mb-4 text-end">
@@ -94,7 +94,7 @@
                         </p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                             <button type="button" class="btn btn-outline-light btn-lg px-4">Quiero ser orador</button>
-                            <button type="button" class="btn btn-success btn-lg px-4 gap-3">Comprar Tickets</button>
+                            <button type="button" class="btn btn-success btn-lg px-4 gap-3"><a href="comprarTickets.html" class="nav-link text-ligth">Comprar Tickets</a></button>
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
         <div class="container-fluid" style="background-color: #02243c;">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white col ">Preguntas Frecuentes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Contactanos</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Prensa</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Conferencias</a></li>

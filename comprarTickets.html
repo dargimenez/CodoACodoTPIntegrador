@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Tickets</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--BARRA DE NAVEGACION-->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-xl">
+                    <a href="https://www.buenosaires.gob.ar/educacion/codo-codo" alt="Codo a Codo" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" target="_blank">
+                        <img src="img/codoacodo.png" class="bi me-2" width="50" height="50">
+                        <span class="fs-4">Conf Bs As</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor02">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a href="index.html#conferencia" class="nav-link active" aria-current="page">La Conferencia</a></li>
+                            <li class="nav-item"><a href="index.html#oradores" class="nav-link">Los oradores</a></li>
+                            <li class="nav-item"><a href="index.html#lugar" class="nav-link">El lugar y la fecha</a></li>
+                            <li class="nav-item"><a href="index.html#orador" class="nav-link">Conviertete en orador</a></li>
+                            <li class="nav-item "><a href="comprarTickets.html" class="nav-link text-success">Comprar Tickets</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--Comprar Tickets-->
+
+        <div class="container-md py-3">
+            <form>
+                <div class="row m-2">
+
+                    <div class="col-md-9 offset-md-3">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"></div>
+                            <input id="btnEstudiante" type="radio" class="btn-check" name="btnradio" autocomplete="off" onclick="cambiarSelect()">
+                            <label class="btn btn-outline-primary text-dark" for="btnEstudiante">
+                                <h4 class="my-2 fw-normal">Estudiante</h4>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Tienen un descuento</li>
+                                    <h4 class="my-2 fw-normal">80 %</h4>
+                                    <li>* presentar documentacion</li>
+                                </ul>
+                            </label>
+
+                            <input id="btnTrainee" type="radio" class="btn-check" name="btnradio" autocomplete="off" onclick="cambiarSelect()">
+                            <label class="btn btn-outline-success text-dark" for="btnTrainee">   
+                                <h4 class="my-2 fw-normal">Trainee</h4>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Tienen un descuento</li>
+                                    <h4 class="my-2 fw-normal">50 %</h4>
+                                    <li>* presentar documentacion</li>
+                                </ul>
+                            </label>
+            
+                            <input id="btnJunior" type="radio" class="btn-check " name="btnradio" autocomplete="off" onclick="cambiarSelect()">
+                            <label class="btn btn-outline-warning text-dark" for="btnJunior">   
+                                <h4 class="my-2 fw-normal">Junior</h4>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Tienen un descuento</li>
+                                    <h4 class="my-2 fw-normal">15 %</h4>
+                                    <li>* presentar documentacion</li>
+                                </ul> 
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <h6 class="text-center">
+                            <small class="text-muted">VENTA</small>
+                        </h6>
+                    </div>
+                    <div class="row">
+                        <h2 class="text-center">
+                            VALOR DE TICKET $ 200
+                        </h2>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                            <div class="row row-cols-1 row-cols-2">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nombre">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Apellido">
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <input type="email" class="form-control" placeholder="Correo">
+                            </div>
+                            
+                            <div class="row row-cols-1 row-cols-2  mt-3">
+                                <div class="col">
+                                    <label for="cantidad">Cantidad</label>
+                                    <input id="cantidad" type="text" class="form-control" placeholder="cantidad">
+                                </div>
+                                <div class="col">
+                                    <label for="categoria">Categoria</label>
+                                    <select class="form-select" id="categoria" aria-label="Floating label select example" onclick="cambiarRadio()">
+                                        <option selected>Seleccione Categoria</option>
+                                        <option id="selEstudiante" value="estudiante">Estudiante</option>
+                                        <option id="selTrainee" value="trainee">Trainee</option>
+                                        <option id="selJunior" value="junior">Junior</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-primary mt-4">
+                                <h4 id="total"> Total a pagar: $ </h4>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-block btn-success btn-lg text-white">Borrar</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-block btn-success btn-lg text-white" onclick="calcular()">Resumen</button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--FOOTER-->
+        <div class="container-fluid" style="background-color: #02243c;">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white col ">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Contactanos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Prensa</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Conferencias</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Terminos y Condiciones</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Privacidad</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-white ">Estudiantes</a></li>
+                </ul>
+            </footer>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/comprarTickets.js"></script>
+</body>
+</html>
